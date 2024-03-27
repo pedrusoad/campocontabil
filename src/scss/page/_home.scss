@@ -1,0 +1,21 @@
+// @include media-breakpoint-down(md) {
+//   margin-top: 2.25rem !important;
+// }
+.init-hidden {
+  opacity: 0;
+  transition: opacity 2s linear;
+}
+
+.init-hidden-off {
+  opacity: 1;
+}
+
+.banner {
+  background-image: url('../../assets/images/banner.jpg');
+  // aspect-ratio: 1563/562;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-height: 600px;
+  min-height: 600px;
+  background-position: center;
+}
