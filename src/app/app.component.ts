@@ -12,7 +12,20 @@ import { PrivacidadeCardComponent } from './shared/components/privacidade-card/p
 })
 export class AppComponent {
 
+  public isScrolled: string = '';
+
   constructor() {
+  }
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    if (window.scrollY < 100) {
+      this.isScrolled = '';
+    } else if (window.scrollY >= 100 && window.scrollY < 200) {
+      this.isScrolled = 'scrolled-sm';
+    } else {
+      this.isScrolled = 'scrolled-lg';
+    }
   }
 
   ngOnInit(): void {

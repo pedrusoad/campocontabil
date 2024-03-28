@@ -12,33 +12,96 @@
 @import "./global";
 @import "./features";
 
-body{
-  --bs-body-font-weight:300;
-  --bs-body-line-height:26px;
+body {
+  --bs-body-font-weight: 300;
+  --bs-body-line-height: 26px;
   font-size: 1.25rem;
   line-height: 1.25;
   font-weight: 400;
-  @include media-breakpoint-down(lg){
+
+  @include media-breakpoint-down(lg) {
     font-size: 1rem;
   }
 }
-h1{
+
+h1 {
   font-size: 3.5rem !important;
-  @include media-breakpoint-down(lg){
+
+  @include media-breakpoint-down(lg) {
     font-size: 2.2rem !important;
   }
 }
-h2{
+
+h2 {
   font-size: 3rem !important;
-  @include media-breakpoint-down(lg){
+
+  @include media-breakpoint-down(lg) {
     font-size: 1.8rem !important;
   }
 }
-b{
+
+b {
   font-weight: 500 !important;
 }
-.container{
+
+.container {
   @media (min-width: 1400px) {
     max-width: 1216px !important;
+  }
+}
+
+.nav-link {
+  color: white;
+}
+
+nav {
+  background-color: rgba(48, 107, 209, 0);
+  transition: background-color 0.5s ease;
+
+  @include media-breakpoint-down(lg) {
+    background-color: rgba(48, 107, 209, 1);
+  }
+}
+
+nav.scrolled-sm {
+  background-color: rgb(48, 107, 209, 0.1) !important;
+}
+
+nav.scrolled-lg {
+  background-color: rgb(48, 107, 209, 1) !important;
+  box-shadow: 1px 1px 20px;
+}
+
+/* Personalização da barra de rolagem para navegadores WebKit (Chrome, Safari, etc.) */
+::-webkit-scrollbar {
+  width: .5rem;
+}
+
+::-webkit-scrollbar-button {
+  width: 0;
+  height: 0;
+  display: none;
+}
+
+::-webkit-scrollbar-track {
+  background: #181818;
+  /* Cor de fundo da área da barra de rolagem */
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, $scroll-primary 0%, $scroll-secondary 50%, $scroll-primary 100%);
+  border-radius: 3px;
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: $scroll-primary;
+  /* Cor da barra de rolagem quando o mouse passa por cima */
+}
+
+@media (max-width: 450px) {
+  ::-webkit-scrollbar {
+    width: 0;
+    overflow-x: hidden;
   }
 }
