@@ -14,20 +14,38 @@
     </div>
 </div>
 
-<div class="bg-gradient-secondary py-4">
+<div class="bg-gradient-white py-4">
     <div class="container">
-        <div class="flip-card">
-            <div class="flip-card-inner">
-                <div class="flip-card-front p-2">
-                    <div class="img-card"></div>
-                    <p class="title">FLIP CARD</p>
-                    <p>Hover Me</p>
+        <div class="row justify-content-center gy-3 d-flex">
+            <ng-container *ngFor="let card of service_cards">
+                <div class="col-12 col-md-10 col-lg-4 init-hidden">
+                    <div class="card-services h-100 bg-gradient-secondary">
+                        <div>
+                            <img [src]="card.img" alt="Card image" class="img-fluid pic rounded-3">
+                        </div>
+                        <div class="p-3">
+                            <div class="mb-3 fs-5 fw-600" [innerHTML]="card.title"></div>
+                            <div class="fs-6" [innerHTML]="card.description"></div>
+                        </div>
+                    </div>
                 </div>
-                <div class="flip-card-back">
-                    <p class="title">BACK</p>
-                    <p>Leave Me</p>
+            </ng-container>
+        </div>
+        <div class="pt-3"></div>
+        <div class="row justify-content-center gy-3 d-flex">
+            <ng-container *ngFor="let card of service_cards2">
+                <div class="col-12 col-md-10 col-lg-4 init-hidden">
+                    <div class="card-services h-100 bg-gradient-secondary">
+                        <div class="text-center pt-4">
+                            <img [src]="card.img" alt="Card image" class="img-fluid fig rounded-3">
+                        </div>
+                        <div class="p-3">
+                            <div class="mb-3 fs-5 fw-600" [innerHTML]="card.title"></div>
+                            <div class="fs-6" [innerHTML]="card.description"></div>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            </ng-container>
         </div>
     </div>
 </div>
@@ -51,3 +69,19 @@
     <h1>Teste</h1>
 </div>
 <cfa-footer></cfa-footer>
+
+
+
+<!-- <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front p-2">
+                    <div class="img-card"></div>
+                    <p class="title">FLIP CARD</p>
+                    <p>Hover Me</p>
+                </div>
+                <div class="flip-card-back">
+                    <p class="title">BACK</p>
+                    <p>Leave Me</p>
+                </div>
+            </div>
+        </div> -->

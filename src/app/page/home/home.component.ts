@@ -19,6 +19,8 @@ const COMPONENTS = [
   TimerComponent,
 ]
 
+import { AppService } from '@services';
+
 import {
   BackComponent,
 } from '@features'
@@ -41,8 +43,16 @@ const FEATURES = [
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
-  providers: []
+  providers: [AppService]
 })
 
 export class HomeComponent {
+
+  constructor (
+    private AppService: AppService
+  ) { }
+
+  public service_cards = this.AppService.service_cards;
+  public service_cards2 = this.AppService.service_cards2;
+
 }

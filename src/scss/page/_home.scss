@@ -3,11 +3,13 @@
 // }
 .init-hidden {
   opacity: 0;
-  transition: opacity 2s linear;
+  transition: .5s linear;
+  padding-top: 3rem !important;
 }
 
 .init-hidden-off {
   opacity: 1;
+  transition: .5s linear;
 }
 
 .banner {
@@ -27,5 +29,24 @@
     right: 0;
     left: 0;
     z-index: 1030;
+  }
+}
+
+.card-services {
+  box-shadow: -8px 8px 14px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 1rem;
+  overflow: hidden;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  img.pic {
+    object-fit: cover;
+    object-position: center;
+    aspect-ratio: 3/1;
+  }
+  img.fig {
+    object-fit: cover;
+    object-position: center;
+    aspect-ratio: 1/1;
+    max-height: 100px;
   }
 }

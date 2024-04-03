@@ -33,8 +33,9 @@ export class AppComponent {
 
       const observer = new IntersectionObserver(entries => {
         Array.from(entries).forEach(entry => {
-          if (entry.intersectionRatio >= 1) {
+          if (entry.intersectionRatio >= 0.5) {
             entry.target.classList.add('init-hidden-off')
+            entry.target.classList.remove('init-hidden')
           }
         })
       }, {

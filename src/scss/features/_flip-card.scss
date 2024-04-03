@@ -1,9 +1,10 @@
 .flip-card {
-  background-color: transparent;
+  // background-color: transparent;
   width: 190px;
   height: 254px;
   perspective: 1000px;
   font-family: sans-serif;
+  
 }
 
 .title {
@@ -20,6 +21,7 @@
   text-align: center;
   transition: transform 0.8s;
   transform-style: preserve-3d;
+  
 }
 
 .flip-card:hover .flip-card-inner {
@@ -35,6 +37,8 @@
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   border-radius: 1rem;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
 }
 
 .flip-card-front {

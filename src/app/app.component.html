@@ -1,7 +1,7 @@
 <nav #navbar id="navbar" [class]="'navbar navbar-expand-lg fixed-lg-top ' + isScrolled">
     <div class="container">
         <a class="navbar-brand" href="/">
-            <img [src]="'assets/images/campocontabil-logo-sm' + (isScrolled === 'scrolled-lg' ? '-white' : '') + '.png'" alt="Campocontabil" class="w-200px">
+            <img [src]="'assets/images/campocontabil-logo-sm' + (isScrolled === 'scrolled-lg' ? '' : '') + '.png'" alt="Campocontabil" class="w-200px">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,4 +34,4 @@
     </div>
 </nav>
 <router-outlet></router-outlet>
-<app-privacidade-card></app-privacidade-card>
+<!-- <app-privacidade-card></app-privacidade-card> -->
