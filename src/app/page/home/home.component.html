@@ -4,18 +4,32 @@
             <div class="row">
                 <div class="col-12 col-md-8 col-lg-7">
                     <div class="blur rounded-3 bg-dark bg-opacity-10 text-center text-md-start shadow">
-                        <h1 class="w-auto p-3 fs-1 text-white"><strong>Simplificando</strong> a contabilidade do agronegócio para
-                            você focar no que <strong>realmente importa.</strong>
+                        <h1 class="w-auto p-3 fs-1 text-white"><strong>Simplificando</strong> a contabilidade do
+                            agronegócio para você focar no que <strong>realmente importa.</strong>
                         </h1>
                     </div>
+                </div>
+                <div class="col-12 d-flex justify-content-center justify-content-md-start mt-3">
+                    <btn-link [href]="'https://api.whatsapp.com/send?phone=5562999337494'" [theme]="'05'"
+                        [target]="'_blank'">
+                        <div class="d-flex align-items-center fs-6">Fale conosco
+                            <span class="ms-2 fs-3">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </span>
+                        </div>
+                    </btn-link>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
-<div class="bg-gradient-white py-4">
+<div class="bg-gradient-white py-4 position-relative">
+    <div #servicos id="servicos" class="anchor-link"></div>
     <div class="container">
+        <div class="text-center fs-2 fw-700 pb-4">
+            Nossos Serviços
+        </div>
         <div class="row justify-content-center gy-3 d-flex">
             <ng-container *ngFor="let card of service_cards">
                 <div class="col-12 col-md-10 col-lg-4 init-hidden">
@@ -50,7 +64,29 @@
     </div>
 </div>
 
-<div class="init-hidden">
+<div class="contact-parallax">
+    <div class="container">
+        <div class="d-flex flex-column align-items-center justify-content-center py-5">
+            <div class="text-center fs-2 fw-700 pb-4 text-white">
+                Vamos juntos alcançar o topo!
+            </div>
+            <div class="text-center fs-6 text-white pb-3">
+                Acreditamos que o sucesso dos nossos clientes é o nosso maior sucesso. Por isso, nos dedicamos a
+                construir relacionamentos de confiança e colaboração, trabalhando lado a lado com você para alcançarmos
+                os melhores resultados.
+            </div>
+            <btn-link [href]="'https://api.whatsapp.com/send?phone=5562999337494'" [theme]="'05'" [target]="'_blank'">
+                <div class="d-flex align-items-center fs-6">Fale conosco
+                    <span class="ms-2 fs-3">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </span>
+                </div>
+            </btn-link>
+        </div>
+    </div>
+</div>
+
+<!-- <div class="init-hidden">
     <h1>Teste</h1>
 </div>
 <div class="init-hidden">
@@ -68,7 +104,7 @@
 <div class="init-hidden">
     <h1>Teste</h1>
 </div>
-<cfa-footer></cfa-footer>
+<cfa-footer></cfa-footer> -->
 
 
 

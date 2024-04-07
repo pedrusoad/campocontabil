@@ -4,7 +4,7 @@ import { AppModule } from '@core'
 import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'cfa-btn-link',
+  selector: 'btn-link',
   standalone: true,
   imports: [
     AppModule,

@@ -2,7 +2,7 @@
 //   margin-top: 2.25rem !important;
 // }
 .init-hidden {
-  opacity: 0;
+  opacity: 0.1;
   transition: .5s linear;
   padding-top: 3rem !important;
 }
@@ -30,6 +30,24 @@
     left: 0;
     z-index: 1030;
   }
+}
+
+.anchor-link {
+
+  @include media-breakpoint-up(lg) {
+    position: absolute;
+    top: -60px;
+    opacity: 0;
+  }
+
+}
+
+.contact-parallax {
+  background-image: url(../../assets/images/parallax.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .card-services {
